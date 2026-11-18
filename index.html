@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8f6" />
+    <meta name="description" content="Hireboard is a lightweight recruiting workspace using synthetic demo data." />
+    <title>Hireboard · Recruiting workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#dashboard" aria-label="Hireboard home"><span class="brand-mark">h</span><span>hireboard</span></a>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="nav-list">
+          <a class="nav-item active" href="#dashboard" data-view="dashboard"><span class="nav-icon">⌂</span>Dashboard</a>
+          <a class="nav-item" href="#jobs" data-view="jobs"><span class="nav-icon">▤</span>Jobs<span id="job-nav-count" class="nav-count"></span></a>
+          <a class="nav-item" href="#candidates" data-view="candidates"><span class="nav-icon">♧</span>Candidates<span id="candidate-nav-count" class="nav-count"></span></a>
+          <a class="nav-item" href="#review" data-view="review"><span class="nav-icon">◉</span>Match review</a>
+        </nav>
+        <div class="sidebar-bottom"><div class="demo-note"><span class="demo-dot"></span><div><strong>Demo workspace</strong><small>Sample data · Local only</small></div></div><button class="profile-button" type="button"><span class="avatar avatar-dark">JD</span><span><strong>Jordan Davis</strong><small>Workspace owner</small></span><span class="more">···</span></button></div>
+      </aside>
+      <main class="main-area">
+        <header class="topbar"><div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="crumb-current">Overview</strong></div><div class="top-actions"><span class="date-label" id="today-label"></span><button class="icon-button" aria-label="Notifications" title="Notifications">♧<i></i></button><span class="avatar avatar-top">JD</span></div></header>
+        <div id="page-content" class="page-content" tabindex="-1"></div>
+      </main>
+    </div>
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <div id="dialog-root"></div>
+  </body>
+</html>
