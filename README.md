@@ -7,8 +7,12 @@ Hireboard is a lightweight applicant tracking demo for a recruiter or small hiri
 ## Features
 
 - Recruiting dashboard with open job, active candidate, interview, and offer counts.
-- Job list with role details, requirements, and applicant totals. Create jobs in the browser.
-- Candidate pipeline with search, role and stage filters, stage changes, and CSV export.
+- Upcoming interview schedule and a stage-by-stage pipeline snapshot.
+- Job list with role details, requirements, applicant totals, and close/reopen controls. Create jobs in the browser.
+- Candidate intake for explicitly fictional records, with a required synthetic-data confirmation and `@example.test` email validation.
+- Candidate pipeline with searchable Kanban and table views, keyboard-accessible stage controls, profile details, and CSV export with spreadsheet formula protection.
+- Interview scheduling on candidate profiles. This records a local demo event; it does not send invitations.
+- One-click restoration to the original sample workspace.
 - Match review that displays listed phrases found and not found in entered text.
 - Responsive layout, keyboard focus indicators, and synthetic starter records.
 
@@ -34,11 +38,11 @@ Run the domain and CSV tests with:
 npm test
 ```
 
-The tests cover empty and partial matching, stage validation, candidate filtering, and CSV escaping.
+The tests cover empty and partial matching, stage validation, candidate filtering, synthetic-only candidate creation, interview scheduling, job status changes, local persistence/migration, and CSV escaping/formula protection.
 
 ## Sample data and persistence
 
-The included roles, applicants, dates, names, and `.test` email addresses are fictional. The initial workspace is copied into browser storage on first use; job additions, stage changes, and activity persist in this browser under `hireboard-demo-v1`. Data is local to the browser profile and is not shared between users or devices. Use the browser's site data controls to clear it and restore the starter dataset.
+The included roles, applicants, dates, names, interview details, and `.test` email addresses are fictional. The initial workspace is copied into browser storage on first use; job and candidate additions, stage changes, interview scheduling, and activity persist in this browser under `hireboard-demo-v1`. Data is local to the browser profile and is not shared between users or devices. Use **Reset** in the workspace sidebar to restore the starter records. Earlier demo data is upgraded locally when the app adds the sample interview schedule.
 
 ## Match calculation and responsible use
 
@@ -49,6 +53,7 @@ This simple phrase overlap is only a review aid. It does not infer equivalent te
 ## Limitations
 
 - This is a local, single-browser demo without authentication, shared storage, or a production database.
+- Interview times are demo records and do not create calendar events or send messages.
 - Resume text is entered manually; there is no file upload or document parsing.
 - The phrase check is literal and can miss synonyms or context.
 - The app is not production HR software and has not been designed for handling real candidate data.
