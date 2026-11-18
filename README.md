@@ -94,17 +94,6 @@ Candidate creation is intentionally restricted to fictional `@example.test` addr
 
 No live demo has been deployed yet. The static files can be hosted on a Node-compatible platform that supports `npm start`; set `PORT` if the host provides one. Add the verified URL here after deployment.
 
-## Portfolio description
-
-### CV-ready project entry
-
-**Hireboard — Applicant Tracking Demo** | Personal portfolio project | 2026  
-**Technologies:** JavaScript (ES modules), HTML, CSS, Node.js, browser local storage
-
-> Designed and built a responsive applicant-tracking demo covering job management, candidate pipelines, interview scheduling, and CSV export; implemented an explainable, literal requirement-phrase review with synthetic-data safeguards and local-only persistence.
-
-This describes hands-on project work and practical exposure to recruiting workflows; it does not imply professional HR employment or production deployment. Adjust the dates and wording to match your own contribution and portfolio context.
-
 ## License
 
 Hireboard is available under the MIT License. See [LICENSE](LICENSE).
